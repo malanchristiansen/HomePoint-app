@@ -1,24 +1,7 @@
-# README
+# DroneSpace
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**Features:**
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Styling using the [Bootstrap gem](https://github.com/twbs/bootstrap-rubygem/blob/master/README.md)
+- Forms using [Simple_form gem](https://github.com/heartcombo/simple_form)
+- Authentication using the [Devise gem](https://github.com/heartcombo/devise)
