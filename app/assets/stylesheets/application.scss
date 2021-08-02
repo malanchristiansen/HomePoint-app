@@ -15,3 +15,54 @@
  */
 
 @import "bootstrap";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+
+$base-color: #4b778d;
+$primary-color: #28b5b5;
+$secondary-color: #8fd9a8;
+$third-color: #8fd9a8;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: $base-color;
+}
+
+.navbar {
+  background-color: $base-color;
+  .navbar-brand {
+    color: #fff;
+  }
+  .nav-link {
+    color: #fff;
+  }
+  .nav-link:hover {
+    color: $primary-color;
+  }
+}
+
+p.alert {
+  margin: 0;
+  padding: 0;
+}
+
+.frontpage-text {
+  color: #fff;
+  margin-top: 0;
+}
+
+.landing-img {
+  background: url("https://images.unsplash.com/photo-1514043454212-14c181f46583?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1778&q=80");
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+}
+
+.content {
+  margin-top: 30px;
+}
