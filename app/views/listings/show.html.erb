@@ -5,6 +5,10 @@
   <%= @listing.title %>
 </p>
 
+<% @listing.images.each do |image|%>
+  <%= image_tag image %>
+<% end %>
+
 <p>
   <strong>Description:</strong>
   <%= @listing.description %>

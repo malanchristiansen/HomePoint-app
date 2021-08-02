@@ -4,4 +4,6 @@ class Profile < ApplicationRecord
   has_many :photographs_to_sell, class_name: "Listing", foreign_key: "seller_id"
 
   has_many :reviews 
+
+  has_one_attached :avatar
 end
