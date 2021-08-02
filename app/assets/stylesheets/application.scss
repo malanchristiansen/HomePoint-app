@@ -22,12 +22,6 @@ $primary-color: #28b5b5;
 $secondary-color: #8fd9a8;
 $third-color: #8fd9a8;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Roboto", sans-serif;
   color: $base-color;
@@ -44,11 +38,6 @@ body {
   .nav-link:hover {
     color: $primary-color;
   }
-}
-
-p.alert {
-  margin: 0;
-  padding: 0;
 }
 
 .frontpage-text {

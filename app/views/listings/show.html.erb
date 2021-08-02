@@ -21,28 +21,18 @@
 </p>
 
 <p>
-  <strong>Type:</strong>
-  <%= @listing.type %>
+  <strong>Available as:</strong>
+  <%= @listing.available %>
 </p>
 
 <p>
   <strong>Price:</strong>
-  <%= @listing.price %>
-</p>
-
-<p>
-  <strong>Profile:</strong>
-  <%= @listing.profile_id %>
-</p>
-
-<p>
-  <strong>Buyer:</strong>
-  <%= @listing.buyer_id %>
+  $<%= @listing.price %>
 </p>
 
 <p>
   <strong>Seller:</strong>
-  <%= @listing.seller_id %>
+  <%= @listing.seller.username%>
 </p>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
