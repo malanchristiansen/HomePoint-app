@@ -21,3 +21,30 @@
         </div>
     </div>
 </section>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <% @listings.each do |post|%>
+                <div class="col-md-3">
+                    <div class="card">
+                        <% if post.images && post.images.first %>
+                            <%= image_tag post.images.first, class: "img-card"%>
+                        <% else %>
+                            <%= image_tag "drone-placeholder.jpg", class: "img-card"%>
+                        <% end %>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">
+                            <%= post.title%>
+                        </p>
+                        <p>
+                        $<%= post.price %>
+                        </p>
+                        <%= link_to 'View more', listing_path(post.id), class: "btn btn-success btn-sm pt-1"%>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+    </div>
+</section>
