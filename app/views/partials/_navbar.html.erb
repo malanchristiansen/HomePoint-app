@@ -17,9 +17,11 @@
           <%= link_to 'Log out', destroy_user_session_path, method: :delete, class: "nav-link"%>
         <% else %>
         <li class="nav-item">
-          <%= link_to 'Sign In', new_user_session_path, class: "nav-link"%>
-        </li>
+          <%= link_to 'Sign In', new_user_session_path(user_type: "returning_user"), class: "nav-link"%>
+        <li class="nav-item">
+          <%= link_to 'Register to buy', new_user_registration_path(user_type: "buyer"), class: "nav-link"%>
         <% end %>
+        </li>
       </ul>
     </div>
   </div>
