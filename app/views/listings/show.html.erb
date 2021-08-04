@@ -39,5 +39,13 @@
   <%= @listing.seller.username%>
 </p>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<% if current_user && current_user.profile && (current_user.profile.id == @listing.seller.id)%>
+  <%= link_to 'Edit', edit_listing_path(@listing) %>
+<% else %>
+  <% if @listing.buyer %>
+    <button class="btn btn-danger">Sold</button>
+  <% else %>
+    <%= link_to "Buy", root_path, class: "btn btn-success"%>
+  <% end %>
+<% end %>
 <%= link_to 'Back', listings_path %>
