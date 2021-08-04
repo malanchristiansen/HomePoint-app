@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  post 'payment/page', to: "payment#create", as: 'payment'
+  get 'payment/cancel', to: "payment#cancel", as: 'payment_cancel'
   resources :reviews
   resources :listings
   resources :profiles
