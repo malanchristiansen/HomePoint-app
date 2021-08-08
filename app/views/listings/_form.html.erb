@@ -6,10 +6,10 @@
   <div class="form-inputs">
     <%= f.input :title %>
     <%= f.input :description %>
-    <%= f.input :date_taken %>
-    <%= f.input :category %>
-    <%= f.input :available %>
-    <%= f.input :price %>
+    <%= f.input :date_taken, as: :date, start_year: Date.today.year - 30, end_year: Date.today.year %>
+    <%= f.input :category, collection: [ "Ocean", "Nature", "Cities", "Objects", "Other"] %> 
+    <%= f.input :available, collection: [ "Print", "Framed", "File" ] %>
+    <%= f.input :price, input_html: { min: 0 }%>
     <%= f.file_field :images, multiple: true %>
   </div>
 
