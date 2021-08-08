@@ -13,38 +13,107 @@
         <div class="col-6">
             <h3>HomePoint</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque iste nam, perferendis in exercitationem non doloribus eveniet corrupti, soluta quod accusamus possimus nulla sequi, magnam dicta alias numquam at!</p>
+            <%= link_to 'All', drones_path, class: "btn btn-info btn pt-1"%>
+            <%= link_to 'Cities', cities_path, class: "btn btn-info btn pt-1"%>
+            <%= link_to 'Nature', nature_path, class: "btn btn-info btn pt-1"%>
         </div>
         <div class="col-6">
             <h3>HomePoint</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo itaque iste nam, perferendis in exercitationem non doloribus eveniet corrupti, soluta quod accusamus possimus nulla sequi, magnam dicta alias numquam at!</p>
+            <%= link_to 'Ocean', ocean_path, class: "btn btn-info btn pt-1"%>
+            <%= link_to 'Objects', objects_path, class: "btn btn-info btn pt-1"%>
+            <%= link_to 'Other', other_path, class: "btn btn-info btn pt-1"%>
         </div>
+        </div>
+    </div>
+
+</section>
+<section>
+    <div class="container">
+        <div class="row py-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <%= link_to drones_path do %>
+                        <%= image_tag "drone-placeholder.jpg", class: "card-img" %>
+                        <h2 class="card-img-overlay">VIEW ALL</h2>
+                    <% end %>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= link_to cities_path do %>
+                        <%= image_tag "drone-placeholder.jpg", class: "card-img" %>
+                        <h2 class="card-img-overlay">VIEW CITIES</h2>
+                    <% end %>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= link_to nature_path do %>
+                        <%= image_tag "drone-placeholder.jpg", class: "card-img" %>
+                        <h2 class="card-img-overlay">VIEW NATURE</h2>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+                <div class="row py-5">
+            <div class="col-md-4">
+                <div class="card">
+                    <%= link_to ocean_path do %>
+                        <%= image_tag "drone-placeholder.jpg", class: "card-img" %>
+                        <h2 class="card-img-overlay">VIEW OCEAN</h2>
+                    <% end %>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= link_to objects_path do %>
+                        <%= image_tag "drone-placeholder.jpg", class: "card-img" %>
+                        <h2 class="card-img-overlay">VIEW OBJECTS</h2>
+                    <% end %>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <%= link_to other_path do %>
+                        <%= image_tag "drone-placeholder.jpg", class: "card-img" %>
+                        <h2 class="card-img-overlay">VIEW OTHER</h2>
+                    <% end %>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 
-<section>
+
+
+
+
+
+
+<%# <section>
     <div class="container">
         <div class="row">
             <% @listings.each do |post|%>
-                <div class="col-md-3">
+                <%# <div class="col-md-3">
                     <div class="card">
                         <% if post.images && post.images.first %>
-                            <%= image_tag post.images.first, class: "img-card"%>
-                        <% else %>
-                            <%= image_tag "drone-placeholder.jpg", class: "img-card"%>
-                        <% end %>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text">
-                            <%= post.title%>
-                        </p>
-                        <p>
-                        $<%= post.price %>
-                        </p>
-                        <%= link_to 'View more', listing_path(post.id), class: "btn btn-success btn-sm pt-1"%>
-                    </div>
-                </div>
-            <% end %>
-        </div>
-    </div>
-</section>
+                            <%# <%= image_tag post.images.first, class: "img-card"%>
+                        <%# <% else %>
+                            <%# <%= image_tag "drone-placeholder.jpg", class: "img-card"%> 
+                        <%# <% end %> 
+                    <%# </div> %> 
+                    <%# <div class="card-body"> %>
+                        <%# <p class="card-text"> %>
+                            <%# <%= post.title%> 
+                        <%# </p> %>
+                        <%# <p> %>
+                        <%# $<%= post.price %> 
+                        <%# </p> %>
+                        <%# <%= link_to 'View more', listing_path(post.id), class: "btn btn-success btn-sm pt-1"%> %>
+                    <%# </div> %>
+                <%# </div> %>
+            <%# <% end %> 
+        <%# </div> %>
+    <%# </div> %>
+<%# </section>  %>
