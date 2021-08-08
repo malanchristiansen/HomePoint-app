@@ -7,7 +7,23 @@ class Listing < ApplicationRecord
 
   # Validations 
   validates :title, :category, :price, presence: true
+  validates :title, length: { in: 2..10 }
   validates :description, length: { maximum: 400, too_long: "has a maximun of %{count} charcaters!" }
   validates :price, numericality: { greater_than_or_equal_to: 0 }
+
+  # Sanitisation
+  before_validation :check_title
+  before_save :check_whitespace
+
+  def check_title
+    if self.title.length < 2 && !self.title.blank?
+        errors.add :base, :invalid, message: "The title is too short!"
+    end
+  end
+
+  def check_whitespace
+    self.title = self.title.strip
+    self.description = self.description.strip
+  end
 
 end
