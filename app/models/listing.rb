@@ -7,8 +7,8 @@ class Listing < ApplicationRecord
 
   # Validations 
   validates :title, :category, :price, presence: true
-  validates :title, length: { in: 2..10 }
-  validates :description, length: { maximum: 400, too_long: "has a maximun of %{count} charcaters!" }
+  validates :title, length: { in: 2..40 }
+  validates :description, length: { maximum: 500, too_long: "has a maximun of %{count} charcaters!" }
   validates :price, numericality: { greater_than_or_equal_to: 0 }
 
   # Sanitisation

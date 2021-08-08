@@ -7,8 +7,8 @@ class Profile < ApplicationRecord
 
   # Validations 
   validates :username, :first_name, presence: true
-  validates :username, length: { in: 2..16 }
-  validates :first_name, :last_name, length: { in: 2..20 }
+  validates :username, length: { in: 2..20 }
+  validates :first_name, :last_name, length: { in: 2..50 }
   validates :bio, length: { maximum: 500, too_long: "%{count} is the maximum number of charcaters!" }
 
   # Sanitisation
