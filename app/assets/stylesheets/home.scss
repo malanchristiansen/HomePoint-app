@@ -2,16 +2,53 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
-.img-card {
-  height: 15vw;
+.frontpage-text {
+  color: #fff;
+  margin-top: 0;
 }
 
-.card-body p {
-  margin-bottom: 0;
+.landing-img {
+  background: url("https://images.pexels.com/photos/4183522/pexels-photo-4183522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background-size: cover;
+  background-position: bottom;
+  height: 50vh;
 }
 
-.btn {
-  margin-top: 5px;
+.landingpage-row {
+  background-color: #f1f8e9;
 }
+.landingpage-row-img {
+  width: 50%;
+  // height: 50vh;
+  margin-bottom: 20px;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.headline {
+  color: #004d40;
+}
+
+.card-img {
+  height: 40vh;
+}
+
+.card-img-overlay {
+  color: #fff;
+}
+
+// .img-card {
+//   height: 15vw;
+// }
+
+// .card-body p {
+//   margin-bottom: 0;
+// }
+
+// .btn {
+//   margin-top: 5px;
+// }
