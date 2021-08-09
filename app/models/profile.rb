@@ -12,17 +12,17 @@ class Profile < ApplicationRecord
   validates :bio, length: { maximum: 500, too_long: "%{count} is the maximum number of charcaters!" }
 
   # Sanitisation
-  before_save :check_whitespace, :validates_format_of
+  # before_save :check_whitespace, :validates_format_of
 
-  def check_whitespace
-    self.username = self.title.strip
-    self.bio = self.description.strip
-  end
+  # def check_whitespace
+  #   self.username = self.username.strip
+  #   self.bio = self.bio.strip
+  # end
 
-  def validates_format_of 
-    if self.username.includes("#")
-      errors.add :base, :invalid, message: "The title is too short!"
-    end
-  end 
+  # def validates_format_of 
+  #   if self.username.includes("#")
+  #     errors.add :base, :invalid, message: "The title is too short!"
+  #   end
+  # end 
 
 end

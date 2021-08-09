@@ -1,52 +1,54 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @listing.title %>
-</p>
-
-<% @listing.images.each do |image|%>
-  <%= image_tag image, class: "img-listing"%>
-<% end %>
-
-<p>
-  <strong>Description:</strong>
-  <%= @listing.description %>
-</p>
-
-<p>
-  <strong>Date taken:</strong>
-  <%= @listing.date_taken %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @listing.category %>
-</p>
-
-<p>
-  <strong>Available as:</strong>
-  <%= @listing.available %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  $<%= @listing.price %>
-</p>
-
-<p>
-  <strong>Seller:</strong>
-  <%= @listing.seller.username%>
-</p>
-
-<% if current_user && current_user.profile && (current_user.profile.id == @listing.seller.id)%>
-  <%= link_to 'Edit', edit_listing_path(@listing) %>
-<% else %>
-  <% if @listing.buyer %>
-    <button class="btn btn-danger">Sold</button>
-    <%= link_to 'Leave Review', new_review_path(:listing => @listing), class: "btn btn-success" %>
-  <% else %>
-    <%= link_to 'Buy', payment_path(photograph_id: @listing.id), method: :post, class: "btn btn-success"%>
-  <% end %>
-<% end %>
-<%= link_to 'Back', listings_path %>
+<section>
+  <div class="container content">
+    <div class="row shadow mt-5 py-5 px-3 listing-row d-flex align-items-center">
+          <div class="col-lg-6">
+          <% @listing.images.each do |image|%>
+            <%= image_tag image, class: "rounded img-listing"%>
+          <% end %>
+          </div>
+          <div class="col-lg-6">
+            <h4 class="listing-title">
+              <strong><%= @listing.title %></strong>              
+            </h4>
+            <div class="listing-description">
+              <p>
+                <strong>Description:</strong>
+                <%= @listing.description %>
+              </p>
+              <p>
+                <strong>Date taken:</strong>
+                <%= @listing.date_taken %>
+              </p>
+              <p>
+                <strong>Category:</strong>
+                <%= @listing.category %>
+              </p>
+              <p>
+                <strong>Available as:</strong>
+                <%= @listing.available %>
+              </p>
+              <p>
+                <strong>Price:</strong>
+                $<%= @listing.price %>
+              </p>
+              <p>
+                <strong>Seller:</strong>
+                <%= @listing.seller.username%>
+              </p>
+              </div>
+              <% if current_user && current_user.profile && (current_user.profile.id == @listing.seller.id)%>
+                  <%= link_to 'Edit', edit_listing_path(@listing), class: "btn btn-green" %>
+              <% else %>
+                <% if @listing.buyer %>
+                <button class="btn btn-danger">Sold</button>
+                  <%= link_to 'Leave Review', new_review_path(:listing => @listing), class: "btn btn-green" %>
+                <% else %>
+                  <%= link_to 'Buy', payment_path(photograph_id: @listing.id), method: :post, class: "btn btn-green"%>
+                <% end %>
+              <% end %>
+              <%= link_to 'Back', drones_path, class: "btn btn-green" %>
+            </div>
+        </div>
+    </div>
+</section>

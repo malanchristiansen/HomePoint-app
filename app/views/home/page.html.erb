@@ -12,7 +12,7 @@
 
 <section>
     <div class="container">
-        <div class="row py-5 px-0">
+        <div class="row py-5 px-0 flex-wrap">
         <h1  class="headline-2">Beautiful Drone Photographs</h1>
             <div class="col-md-2">
                 <div class="card">
@@ -67,17 +67,17 @@
 
 <section>
     <div class="container content pb-5">
-        <div class="row rounded landingpage-row justify-content-center py-4">
+        <div class="row rounded landingpage-row d-flex align-items-center py-4">
         <div class="col-md-7 about-text">
-            <h3>About HomePoint</h3>
-            <p>A great community for drone photographers and enthusiats to share and sell photographs</p>
-            <p>Browse through the marketplace and find the perfect shot.</p>
-            <p>Photographers can choose between selling the raw file, printed version, and framed printed version</p>
-            <%= link_to 'View All', drones_path, class: "btn btn pt-1"%>
+            <h3><strong>About HomePoint</strong></h3>
+            <p> &#10004; A great community for drone photographers and enthusiats to share and sell photographs</p>
+            <p> &#10004; Browse through the marketplace and find the perfect shot.</p>
+            <p> &#10004; Photographers can choose between selling the raw file, printed version, and framed printed version</p>
+            <%= link_to 'View All', drones_path, class: "btn btn mt-2"%>
         </div>
         <div class="col">
-            <div class="row justify-content-center">
-                <%= image_tag "drone-photographer.jpg", class: "rounded landingpage-row-img img-fluid"%>
+            <div class="row d-flex align-items-center">
+                <%= image_tag "drone-photographer.jpg", class: "landingpage-row-img img-fluid"%>
             </div>
         </div> 
     </div>

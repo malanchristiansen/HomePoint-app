@@ -4,7 +4,23 @@
 
 // @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
+.listing-row {
+  background-color: #fafafae7;
+  .btn-green {
+    background-color: #39796b;
+    color: #fff;
+  }
+}
+
 .img-listing {
-  width: 50%;
-  height: 50%;
+  max-height: 500px;
+  width: 90%;
+}
+
+.listing-title {
+  color: #004d40;
+}
+
+.listing-description {
+  color: #004d40;
 }
