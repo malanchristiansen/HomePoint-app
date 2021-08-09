@@ -10,26 +10,28 @@
 }
 
 .landing-img {
-  background: url("https://images.pexels.com/photos/4183522/pexels-photo-4183522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  // background: url("https://images.pexels.com/photos/4183522/pexels-photo-4183522.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  background: url("https://images.pexels.com/photos/2876511/pexels-photo-2876511.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   height: 50vh;
 }
 
-.landingpage-row {
-  background-color: #f1f8e9;
-}
-.landingpage-row-img {
-  width: 50%;
-  // height: 50vh;
-  margin-bottom: 20px;
+.headline-box {
+  // background-color: #fafafa;
+  background-color: #39796b;
+  h3 {
+    color: #fff;
+  }
 }
 
 .content {
   margin-top: 40px;
 }
 
-.headline {
+// Categories
+
+.headline-2 {
   color: #004d40;
 }
 
@@ -41,14 +43,19 @@
   color: #fff;
 }
 
-// .img-card {
-//   height: 15vw;
-// }
+// #bottom page
 
-// .card-body p {
-//   margin-bottom: 0;
-// }
-
-// .btn {
-//   margin-top: 5px;
-// }
+.landingpage-row {
+  background-color: #fafafa;
+  .about-text {
+    color: #004d40;
+    margin-left: 40px;
+  }
+  .btn {
+    background-color: #39796b;
+    color: #fff;
+  }
+}
+.landingpage-row-img {
+  width: 90%;
+}

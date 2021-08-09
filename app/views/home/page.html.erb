@@ -1,20 +1,23 @@
 <header>
     <div class="container-fluid landing-img d-flex align-items-center justify-content-center">
         <div class="text-center frontpage-text">
-            <h1 class="display-1 mb-0">Home Point</h1>
+            <h1 class="display-1 mb-0">HomePoint</h1>
             <h2 class="display-4 mb-0">Marketplace for drone pilots</h2>
         </div>
+    </div>
+    <div class="headline-box">
+        <h3 class="headline py-4 text-center">Find a beautiful variation of drone shots to decorate your living room or home office</h3>
     </div>
 </header>
 
 <section>
     <div class="container">
         <div class="row py-5 px-0">
-        <h1  class="headline">Beautiful Drone Photographs</h1>
+        <h1  class="headline-2">Beautiful Drone Photographs</h1>
             <div class="col-md-2">
                 <div class="card">
                     <%= link_to drones_path do %>
-                        <%= image_tag "all.jpg", class: "card-img" %>
+                        <%= image_tag "all.jpg", class: "card-img img-fluid" %>
                         <h2 class="card-img-overlay">VIEW ALL</h2>
                     <% end %>
                 </div>
@@ -22,7 +25,7 @@
             <div class="col-md-2">
                 <div class="card">
                     <%= link_to cities_path do %>
-                        <%= image_tag "cities.jpg", class: "card-img" %>
+                        <%= image_tag "cities.jpg", class: "card-img img-fluid" %>
                         <h2 class="card-img-overlay">CITIES</h2>
                     <% end %>
                 </div>
@@ -30,7 +33,7 @@
             <div class="col-md-2">
                 <div class="card">
                     <%= link_to nature_path do %>
-                        <%= image_tag "nature.jpg", class: "card-img" %>
+                        <%= image_tag "nature.jpg", class: "card-img img-fluid" %>
                         <h2 class="card-img-overlay">NATURE</h2>
                     <% end %>
                 </div>
@@ -46,7 +49,7 @@
             <div class="col-md-2">
                 <div class="card">
                     <%= link_to objects_path do %>
-                        <%= image_tag "objects.jpg", class: "card-img" %>
+                        <%= image_tag "objects.jpg", class: "card-img img-fluid" %>
                         <h2 class="card-img-overlay">OBJECTS</h2>
                     <% end %>
                 </div>
@@ -54,7 +57,7 @@
             <div class="col-md-2">
                 <div class="card">
                     <%= link_to other_path do %>
-                        <%= image_tag "beach.jpg", class: "card-img" %>
+                        <%= image_tag "beach.jpg", class: "card-img img-fluid" %>
                         <h2 class="card-img-overlay">OTHER</h2>
                     <% end %>
                 </div>
@@ -64,20 +67,19 @@
 
 <section>
     <div class="container content pb-5">
-        <div class="row landingpage-row justify-content-center py-4">
-        <div class="col">
-            <h3>HomePoint</h3>
+        <div class="row rounded landingpage-row justify-content-center py-4">
+        <div class="col-md-7 about-text">
+            <h3>About HomePoint</h3>
             <p>A great community for drone photographers and enthusiats to share and sell photographs</p>
             <p>Browse through the marketplace and find the perfect shot.</p>
             <p>Photographers can choose between selling the raw file, printed version, and framed printed version</p>
-            <%= link_to 'View All', drones_path, class: "btn btn-info btn pt-1"%>
+            <%= link_to 'View All', drones_path, class: "btn btn pt-1"%>
         </div>
-        <div class="col-2">
+        <div class="col">
             <div class="row justify-content-center">
-                <%= image_tag "", class: "landingpage-row-img"%>
+                <%= image_tag "drone-photographer.jpg", class: "rounded landingpage-row-img img-fluid"%>
             </div>
-        </div>
-        </div>
+        </div> 
     </div>
 </section>
 
