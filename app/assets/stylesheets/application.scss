@@ -17,6 +17,7 @@
 @import "bootstrap";
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
 @import "home";
+@import "profiles";
 
 $base-color: #00251a;
 $primary-color: #004d40;
@@ -42,4 +43,27 @@ body {
   .btn {
     background-color: #39796b;
   }
+}
+
+.text-devise {
+  color: #004d40;
+}
+
+// Buttons devise
+.btn-devise {
+  background-color: #39796b;
+  color: #fff;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.btn-all {
+  background-color: #39796b;
+  color: #fff;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.text-all {
+  color: #00251a;
 }

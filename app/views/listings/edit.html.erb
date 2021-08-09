@@ -1,6 +1,12 @@
-<h1>Editing Listing</h1>
+<div class="container">
+<div class="row">
+<div class="col-md-4">
+<h1 class="text-profile mt-3">Editing Listing</h1>
 
 <%= render 'form', listing: @listing %>
 
-<%= link_to 'Show', @listing %> |
-<%= link_to 'Back', listings_path %>
+<%= link_to 'Show', @listing, class: "btn btn-all" %> 
+<%= link_to 'Back', listings_path, class: "btn btn-all" %>
+</div>
+</div>
+</div>
