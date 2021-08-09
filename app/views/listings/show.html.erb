@@ -44,6 +44,7 @@
 <% else %>
   <% if @listing.buyer %>
     <button class="btn btn-danger">Sold</button>
+    <%= link_to 'Leave Review', new_review_path(:listing => @listing), class: "btn btn-success" %>
   <% else %>
     <%= link_to 'Buy', payment_path(photograph_id: @listing.id), method: :post, class: "btn btn-success"%>
   <% end %>

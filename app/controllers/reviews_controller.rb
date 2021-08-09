@@ -12,7 +12,17 @@ class ReviewsController < ApplicationController
 
   # GET /reviews/new
   def new
-    @review = Review.new
+    if user_signed_in? 
+      if current_user.profile
+          @profile = current_user.profile
+          @review = Review.new
+          @listing = Listing.find(params[:listing])
+      else 
+        redirect_to new_profile_path
+      end 
+    else 
+        redirect_to new_user_session_path 
+    end 
   end
 
   # GET /reviews/1/edit
@@ -22,10 +32,11 @@ class ReviewsController < ApplicationController
   # POST /reviews or /reviews.json
   def create
     @review = Review.new(review_params)
+    @listing = @review.listing
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review, notice: "Review was successfully created." }
+        format.html { redirect_to @listing, notice: "Review was successfully created." }
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new, status: :unprocessable_entity }
