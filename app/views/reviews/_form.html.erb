@@ -4,7 +4,7 @@
   <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
   <div class="form-inputs">
-    <%= f.input :rating %>
+    <%= f.input :rating, collection: 1..10 %>
     <%= f.input :comment %>
     <%= f.hidden_field :profile_id, value: @profile.id%>
     <%= f.hidden_field :listing_id, value: @listing.id %>
