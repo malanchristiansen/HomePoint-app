@@ -7,8 +7,10 @@ class PaymentController < ApplicationController
 
     if ENV['RAILS_ENV'] == "development"
       root_path = "http://localhost:3000"
+      Stripe.api_key = Rails.application.credentials.dig(:stripe, :stripe_api_key)
     else 
       root_path = ENV['ROOT_PATH']
+      Stripe.api_key = Rails.configuration.stripe[:stripe_api_key]
     end
 
     Stripe.api_key = Rails.application.credentials.dig(:stripe_api_key)
