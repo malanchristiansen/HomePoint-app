@@ -1,5 +1,11 @@
+<div class="container content">
+<div class="row">
+<div class="col-md-3">
 <p id="notice"><%= notice %></p>
 
+<div class="card text-all shadow pt-2">
+<div class="card-body">
+<h5>Review</h5>
 <p>
   <strong>Rating:</strong>
   <%= @review.rating %>
@@ -19,6 +25,12 @@
   <strong>Profile:</strong>
   <%= @review.profile_id %>
 </p>
+</div>
+</div>
 
-<%= link_to 'Edit', edit_review_path(@review) %> |
-<%= link_to 'Back', reviews_path %>
+<%= link_to 'Edit', edit_review_path(@review), class: "btn btn-all mt-2" %>
+<%= link_to 'Back', drones_path, class: "btn btn-all mt-2" %>
+
+</div>
+</div>
+</div>
