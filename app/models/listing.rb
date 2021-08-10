@@ -3,6 +3,7 @@ class Listing < ApplicationRecord
   belongs_to :buyer, class_name: "Profile", optional: true 
   belongs_to :seller, class_name: "Profile"
   has_one :location
+  has_many :reviews
   has_many_attached :images 
 
   # Validations 

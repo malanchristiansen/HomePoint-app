@@ -52,3 +52,28 @@
         </div>
     </div>
 </section>
+
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="card">
+            <h4>
+              Reviews:
+              <% @listing.reviews.each do |review|%>
+            </h4>
+          <div class="card-body">
+            <h6 class="card-title my-0">
+                <%= review.rating%>
+            </h6>
+            <p class="card-text my-0">
+                <%= review.comment %>
+            </p>
+            </div>
+            <%end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
