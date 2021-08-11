@@ -11,6 +11,7 @@ class PaymentController < ApplicationController
     else 
       root_path = ENV['ROOT_PATH']
       Stripe.api_key = "sk_test_51JN4OIArcaKaTYtUzqR670O4WBavdP25luF1t1JUo5idAaviAcs52H6Uu6WoC4jUxhxlqKUffJ4Jd7VAW2GnFene00Rk7Hqta7"
+      puts "---------#{Stripe.api_key}"
       # Stripe.api_key = Rails.configuration.stripe[:stripe_api_key]
     end
 
