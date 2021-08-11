@@ -1,5 +1,7 @@
 # HomePoint
 
+![drone](https://media.giphy.com/media/aYQFJK1Wjs9YUaGRw5/giphy.gif)
+
 ## Two-sided marketplace for drone pilots
 
 ### Visit: [HomePoint](https://homepoint-app.herokuapp.com/)
@@ -20,6 +22,56 @@
 1. Drone pilots are given a channel to sell their photographs
 1. People can buy cheap photographs and choose betwween versions for their own needs.
 
+## **Screenshots:**
+
+**Frontpage 1**
+
+![frontpage1](app/assets/images/frontpage1.png)
+
+**Frontpage 2**
+
+![frontpage2](app/assets/images/frontpage2.png)
+
+**Frontpage3**
+
+![frontpage3](app/assets/images/frontpage3.png)
+
+**Browsing**
+
+![browsing](app/assets/images/browsing.png)
+
+**Browsing category Ocean**
+
+![browsingocean](app/assets/images/browseocean.png)
+
+**Signup**
+
+![signup](app/assets/images/signup.png)
+
+**Login**
+
+![login](app/assets/images/login.png)
+
+**Create profile**
+
+![profile](app/assets/images/createprofile.png)
+
+**Create Listing**
+
+![listing](app/assets/images/createlisting.png)
+
+**View Listing**
+
+![viewlisting](app/assets/images/viewlisting.png)
+
+**Buy Listing**
+
+![buy](app/assets/images/buyphotograph.png)
+
+**Create Review**
+
+![review](app/assets/images/createreview.png)
+
 ## **Description**
 
 - **Purpose:** Help drone pilots share and sell their photographs and give people who are into photography a cheaper often to photographs
@@ -33,10 +85,12 @@
   - Users can buy drone photographs from listings from other sellers, not their own
   - Users can leave reviews on listings they have bought a photograph from. They can also edit, update, and delete them.
 
-- **Sitemap:**
-- **Screenshots:**
 - **Target audience:** Drone pilots and people who love photographs
 - **Tech stack:** HTML, CSS, Ruby, Rails, AWS, Heroku
+
+## **Sitemap:**
+
+![sitemap](app/assets/images/sitemap.png)
 
 ## **User stories**
 
@@ -87,7 +141,7 @@
 
 ## **Wireframes**
 
-## **ERD**
+## **Initial ERD**
 
 ![ERD](app/assets/images/ERD_HomePoint.png)
 
@@ -116,9 +170,26 @@
 - Reviews table has an id, rating:integer, comment:description, listing:references, and profile:references as it will belong to the profile id of the user that writes the review and belong to the listing id it is reviewing.
 - Active_storage_blobs and Active_storage_attachments and which is generated via rails active_storage:install.
 
-**Database schema design**
+**Database schema design (final ERD)**
 
-**Trello**
+![ERD](app/assets/images/db-schema.png)
+
+**Project planning - Trello**
 
 - Using Trello to track progress and stay on track with project for deadline
 - Trello board: [Marketplace app](https://trello.com/b/GVGY7seA/marketplace-app)
+- Divided tasks into different list:
+  - Documentation
+    - Added all the documentation related cards in this list, such as user stories, description of features with a checklist etc.
+  - Development
+    - Added all the development related cards in this list, such as models, controllers, authorisation, category pages with a checklist etc.
+  - In progress
+    - All the cards that were in working progress were added to this list, e.g. when working on deployment to Heroku, the card was placed here.
+  - Final touches
+    - Added all the cards that needed final touches to this list, e.g. when working on layout but be able to fully tick of untill query of data were set up in a controller.
+  - Completed
+    - Added all completed cards in this list, e.g. when completing image upload to AWS, it was placed here.
+
+## **Thanks for reading!**
+
+![questions](https://media.giphy.com/media/XHVmD4RyXgSjd8aUMb/giphy.gif)
