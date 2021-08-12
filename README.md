@@ -22,6 +22,22 @@
 1. Drone pilots are given a channel to sell their photographs
 1. People can buy cheap photographs and choose betwween versions for their own needs.
 
+## **Description**
+
+- **Purpose:** Help drone pilots share and sell their photographs and give people who are into photography a cheaper often to photographs
+- **Functionality/Features:**
+
+  - Users first have to authenticate using email and password
+  - Users can create profiles to create a listing and users can create profiles to register as buyer or do both.
+  - Users can create a listing for a drone photograph as a seller filling out information about it and uplaoding a photo
+  - Sellers can also edit, update, delete their listing
+  - All users can browse listings with photogrophs and view them
+  - Users can buy drone photographs from listings from other sellers, not their own
+  - Users can leave reviews on listings they have bought a photograph from. They can also edit, update, and delete them.
+
+- **Target audience:** Drone pilots and people who love photographs
+- **Tech stack:** HTML, CSS, Ruby, Rails, AWS, Heroku
+
 ## **Screenshots:**
 
 **Frontpage 1**
@@ -71,22 +87,6 @@
 **Create Review**
 
 ![review](app/assets/images/createreview.png)
-
-## **Description**
-
-- **Purpose:** Help drone pilots share and sell their photographs and give people who are into photography a cheaper often to photographs
-- **Functionality/Features:**
-
-  - Users first have to authenticate using email and password
-  - Users can create profiles to create a listing and users can create profiles to register as buyer or do both.
-  - Users can create a listing for a drone photograph as a seller filling out information about it and uplaoding a photo
-  - Sellers can also edit, update, delete their listing
-  - All users can browse listings with photogrophs and view them
-  - Users can buy drone photographs from listings from other sellers, not their own
-  - Users can leave reviews on listings they have bought a photograph from. They can also edit, update, and delete them.
-
-- **Target audience:** Drone pilots and people who love photographs
-- **Tech stack:** HTML, CSS, Ruby, Rails, AWS, Heroku
 
 ## **Sitemap:**
 
@@ -140,6 +140,27 @@
 - Authentication of users of app using the [Devise gem](https://github.com/heartcombo/devise)
 
 ## **Wireframes**
+
+**Frontpage**
+![landingpage](app/assets/images/wireframe-homepoint.png)
+
+**View all categories**
+![categories](app/assets/images/wireframe-viewall.png)
+
+**View specific category**
+![category-ocean](app/assets/images/wireframe-category.png)
+
+**Create profile**
+![createprofile](app/assets/images/wireframe-profile.png)
+
+**Create listing**
+![createlisting](app/assets/images/wireframe-listing.png)
+
+**View listing**
+![viewlisting](app/assets/images/wireframe-viewlisting.png)
+
+**Create review**
+![createreview](app/assets/images/wireframe-review.png)
 
 ## **Initial ERD**
 
