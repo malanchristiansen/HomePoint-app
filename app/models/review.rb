@@ -1,4 +1,5 @@
 class Review < ApplicationRecord
+  #Reviews belongs to a listing it is writing about and belongs to a profile that is writing the review
   belongs_to :listing
   belongs_to :profile
   

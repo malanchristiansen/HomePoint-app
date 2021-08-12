@@ -1,8 +1,12 @@
 class Profile < ApplicationRecord
+  #Profile belongs to user 
   belongs_to :user
+  #profiles can buy or sell products as many drone phptographs as they like. This is a self join and points to the listing model
   has_many :photographs_to_buy, class_name: "Listing", foreign_key: "buyer_id"
   has_many :photographs_to_sell, class_name: "Listing", foreign_key: "seller_id"
+  #Profiles can write as many reviews as they'd like
   has_many :reviews 
+  #Profiles can upload a photo 
   has_one_attached :avatar
 
   # Validations 
