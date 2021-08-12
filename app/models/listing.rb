@@ -1,9 +1,16 @@
 class Listing < ApplicationRecord
   #belongs_to :profile
+  #Instead of saying belongs to profile, they belong to teh profile class, as it is a self join and don't have seperate models for buyer and seller
   belongs_to :buyer, class_name: "Profile", optional: true 
   belongs_to :seller, class_name: "Profile"
+
+  #Listings can have one location
   has_one :location
+
+  # Listings can have many reviews and be deleted with reviews as well
   has_many :reviews, dependent: :destroy
+
+  #Listings can have many photos uploaded
   has_many_attached :images 
 
   # Validations 

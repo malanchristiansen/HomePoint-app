@@ -2,6 +2,8 @@ class HomeController < ApplicationController
   def page
   end
 
+  #querying all the listings and associated images for faster loading
+  #The different methods query the differennt categories
   def drones
     @listings = Listing.order(created_at: :desc).includes(:images_attachments)
   end

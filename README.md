@@ -4,7 +4,7 @@
 
 ## Two-sided marketplace for drone pilots
 
-### Visit: [HomePoint](https://homepoint-app.herokuapp.com/)
+## Visit website: [HomePoint](https://homepoint-app.herokuapp.com/)
 
 ### Repo: [HomePoint-app](https://github.com/malanchristiansen/HomePoint-app)
 
@@ -213,4 +213,4 @@
 
 ## **Thanks for reading!**
 
-![questions](https://media.giphy.com/media/XHVmD4RyXgSjd8aUMb/giphy.gif)
+![idea](https://media.giphy.com/media/xT0xem7ZlZ2DOYqpG0/giphy.gif)
